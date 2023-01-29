@@ -1,0 +1,79 @@
+.map {
+  width: 300px;
+}
+
+#nomRegion {
+  display: none;
+  position: fixed;
+  font-size: 20px;
+  color: black;
+  text-shadow: 1px 1px 1px #ffffff;
+  text-align: center;
+  border-radius: 0 20px 20px 20px;
+  box-shadow: 2px 2px 5px black;
+  padding: 5px 10px;
+  border: 1px solid #ffffff;
+  transition: all 0.3s;
+  cursor: default;
+}
+.displayOn {
+  display: block;
+}
+.displayOff {
+  display: none;
+}
+path {
+  cursor: pointer;
+}
+
+.main {
+  position: fixed;
+  height: 100%;
+  margin-left: 400px;
+  padding-right: 2%;
+  text-align: justify;
+  overflow: scroll;
+}
+
+@media screen and (max-height: 500px) {
+  .map {
+    width: 250px;
+  }
+  #nomRegion {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.Melaky {
+  fill: rgb(210, 38, 36);
+  background-color: rgba(210, 38, 36, 0.5);
+}
+.HauteMatsiatra {
+  fill: rgb(210, 38, 36);
+  background-color: rgba(210, 38, 36, 0.5);
+}
+.Diana {
+  fill: rgb(210, 38, 36);
+  background-color: rgba(210, 38, 36, 0.5);
+}
+.Boeny {
+  fill: rgb(210, 38, 36);
+  background-color: rgba(210, 38, 36, 0.5);
+}
+.Betsiboka {
+  fill: rgb(210, 38, 36);
+  background-color: rgba(210, 38, 36, 0.5);
+}
+.AtsimoAndrefana {
+  fill: rgb(210, 38, 36);
+  background-color: rgba(210, 38, 36, 0.5);
+}
+.Analanjirofo {
+  fill: rgb(210, 38, 36);
+  background-color: rgba(210, 38, 36, 0.5);
+}
+.hover {
+  fill: rgb(128, 64, 64);
+  background-color: rgba(128, 64, 64, 0.5);
+}

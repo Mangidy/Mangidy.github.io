@@ -1,0 +1,87 @@
+<section class="banner_main">
+  <div class="p-3 container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="mt-5 text-bg text-center">
+          <ng-container *ngFor="let news of data; let i = index">
+            <h1 class="pb-0 responsive-hide text-left text-white">
+              <i class="fa fa-user"></i> Bonjour {{ news.user.username }}
+            </h1>
+          </ng-container>
+          <div class="progress-animation">
+            <div class="color-animation"></div>
+          </div>
+          <span class="mt-4 mb-2 responsive-hide text-left"
+            >Que souhaitez-vous faire ?</span
+          >
+          <p>
+            Mical vous propose avant tout de déposé une voiture en ligne. Notre
+            équipe se charge de la chercher si vous n'avez pas encore ramené la
+            voiture dans le garage.
+          </p>
+          <a routerLink="/client/deposit" class="a-btn">Déposé une voiture</a>
+          <a routerLink="/client/progress" class="a-btn">Voir la liste</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="testimonial">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <h2>NOS TARIFS</h2>
+          <p>Avec des prix plus bas et des promotions pour nos clients actif</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div
+          id="myCarousel"
+          class="carousel slide testimonial_Carousel"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="carousel-caption">
+                  <div class="row">
+                    <div class="col-md-6 margin_boot">
+                      <div class="test_box">
+                        <i class="mb-3"
+                          ><img src="assets/mical/images/za.jpg" alt="#"
+                        /></i>
+                        <p>
+                          Premier et dixième depôt dans notre garage<br />
+                          Analyse & Devis seulement <strong>20 000Ar</strong>
+                          <br />
+                          Déposé votre voiture maintenant.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 margin_boot">
+                      <div class="test_box">
+                        <i class="mb-4"
+                          ><img src="assets/mical/images/garage.jpg" alt="#"
+                        /></i>
+                        <p>
+                          Réparation de votre voiture<br />
+                          Selon les états de réparation et les pièces à réparer
+                          <br />
+                          Avec du prix plus bas et de qualité haute.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

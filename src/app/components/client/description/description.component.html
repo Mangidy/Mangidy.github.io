@@ -1,0 +1,73 @@
+<section style="background-color: #f4f5f7">
+  <div *ngIf="loader" class="container py-5 h-100">
+    <div class="row d-flex justify-content-center text-center">
+      <div class="col col-lg-6 mb-4 mb-lg-0">
+        <div class="spinner-border" role="status">
+          <span class="sr-only loader-mical" id="loading"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngFor="let news of data; let i = index">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center">
+        <div class="col col-lg-6 mb-4 mb-lg-0">
+          <div class="card mb-3" style="border-radius: 0.5rem">
+            <div class="row g-0">
+              <div
+                class="col-md-4 gradient-custom text-center text-white"
+                style="
+                  border-top-left-radius: 0.5rem;
+                  border-bottom-left-radius: 0.5rem;
+                "
+              >
+                <img
+                  src="../../../../assets/mical/images/profile.png"
+                  alt="Avatar"
+                  class="img-fluid my-4"
+                  style="width: 80px"
+                />
+
+                <h6 class="text-center text-dark text-uppercase">
+                  {{ news.user.nom }} {{ news.user.prenom }}
+                </h6>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-4">
+                  <h6><i class="fa fa-user-circle"></i> Profil</h6>
+                  <hr class="mt-0 mb-4" />
+                  <div class="row pt-1">
+                    <div class="col-12">
+                      <small class="text-muted"
+                        >Email :{{ news.user.email }}</small
+                      >
+                    </div>
+                    <div class="col-12">
+                      <small class="text-muted"
+                        >Phone : {{ news.user.phone }}</small
+                      >
+                    </div>
+                  </div>
+
+                  <hr class="mt-0 mb-4" />
+                  <div class="row pt-1">
+                    <div class="col-12">
+                      <small class="text-muted"
+                        >Adresse :{{ news.user.adress }}</small
+                      >
+                    </div>
+                    <div class="col-12">
+                      <small class="text-muted"
+                        >Username :{{ news.user.username }}</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</section>

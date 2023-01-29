@@ -1,0 +1,122 @@
+<header>
+  <div class="header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+          <div class="full">
+            <div class="center-desk">
+              <div class="logo">
+                <a (click)="takeHome()"
+                  ><img src="assets/mical/images/logo.png" alt="#"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+          <nav class="navigation navbar navbar-expand-md navbar-dark">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarsExample04"
+              aria-controls="navbarsExample04"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+              <ul class="navbar-nav mr-5">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                    ><i class="fa fa-automobile mr-1" aria-hidden="true"></i>
+                    Voiture</a
+                  >
+                  <div class="dropdown-menu">
+                    <a
+                      class="nav-link mt-1 mb-1 dropdown-item pt-2 pb-2"
+                      routerLink="./deposit"
+                      ><i
+                        class="fa fa-space-shuttle padd_right"
+                        aria-hidden="true"
+                      ></i
+                      >Déposé</a
+                    >
+                    <a
+                      class="nav-link mt-1 mb-1 dropdown-item pt-2 pb-2"
+                      routerLink="./progress"
+                      ><i class="fa fa-server padd_right" aria-hidden="true"></i
+                      >Liste</a
+                    >
+                    <a
+                      class="nav-link mt-1 mb-1 dropdown-item pt-2 pb-2"
+                      routerLink="./recovery"
+                      ><i class="fa fa-cog padd_right" aria-hidden="true"></i
+                      >Réparation</a
+                    >
+                    <a
+                      class="nav-link mt-1 mb-1 dropdown-item pt-2 pb-2"
+                      routerLink="./billing"
+                      ><i class="fa fa-file padd_right" aria-hidden="true"></i
+                      >Facture</a
+                    >
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="./notification"
+                    ><i class="fa fa-history mr-1" aria-hidden="true"></i>
+                    Historique</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-user-circle mr-1"></i> Mon compte
+                  </a>
+                  <div class="dropdown-menu">
+                    <a
+                      class="nav-link mt-1 mb-1 dropdown-item pt-2 pb-2"
+                      routerLink="./description"
+                      ><i class="fa fa-user padd_right" aria-hidden="true"></i
+                      >Profil</a
+                    >
+                    <a
+                      class="nav-link mt-1 mb-1 dropdown-item pt-2 pb-2"
+                      (click)="logout()"
+                      ><i
+                        class="fa fa-power-off padd_right"
+                        aria-hidden="true"
+                      ></i
+                      >Déconnexion</a
+                    >
+                  </div>
+                </li>
+              </ul>
+              <form
+                class="ml-5 form-inline"
+                action="#"
+                [formGroup]="searchForm"
+                (ngSubmit)="goSearch()"
+              >
+                <input
+                  class="form-control mr-sm-2"
+                  type="text"
+                  placeholder="Rechercher une voiture"
+                  formControlName="search"
+                  [(ngModel)]="searcher"
+                />
+                <button
+                  class="btn btn-success"
+                  type="submit"
+                  [disabled]="!searcher"
+                >
+                  <i class="fa fa-search"></i>
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

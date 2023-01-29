@@ -1,0 +1,58 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-back container wrap-back p-5">
+      <h3
+        class="d-flex justify-content-between align-content-center align-items-center responsive-hidee"
+      >
+        Payements
+        <i class="fa fa-money mr-3"></i>
+      </h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Numero voiture</th>
+            <th scope="col">Marque</th>
+            <th scope="col">Modèle</th>
+            <th scope="col">Avance</th>
+            <th scope="col">Reste</th>
+            <th scope="col">Total</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let news of data; let i = index">
+            <tr *ngIf="news.paiement == false">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ news.voiture.numero }}</td>
+              <td>{{ news.voiture.marque }}</td>
+              <td>{{ news.voiture.modele }}</td>
+              <td>{{ news.facture.Avance }}</td>
+              <td>{{ news.facture.Reste }}</td>
+              <td>{{ news.facture.Total }}</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-success btn-sm ntn-block"
+                  (click)="validate(news.id)"
+                >
+                  VALIDER
+                </button>
+              </td>
+            </tr>
+          </ng-container>
+          <tr></tr>
+        </tbody>
+      </table>
+      <hr />
+      <div
+        *ngIf="loader"
+        class="mb-3 d-flex justify-content-center text-center w-100"
+      >
+        <div class="spinner-border" role="status">
+          <span class="sr-only loader-mical" id="loading"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
