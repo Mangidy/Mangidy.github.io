@@ -12,7 +12,7 @@ export class HomepageComponent {
   constructor(private auth:AuthService,private titleService: Title){ this.titleService.setTitle("Acceuil");}
   ngOnInit() {
     
-  this.auth.getClient().subscribe((val) =>{ this.data=val; console.log(val);});
+  this.auth.getClient().subscribe((val) =>{ this.data=val; });
 
   }
   objectKeys = Object.keys;

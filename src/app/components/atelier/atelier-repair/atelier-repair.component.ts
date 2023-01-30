@@ -23,7 +23,7 @@ export class AtelierRepairComponent {
     return this.repairForm.get('value');
   }
   data: any;
-
+  objectKeys = Object.keys;
   constructor(private auth: AuthService,private titleService: Title) {
     this.titleService.setTitle("Facture");
     this.loader = true;

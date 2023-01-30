@@ -29,7 +29,7 @@
               formControlName="numero"
             >
               <ng-container *ngFor="let news of data; let i = index">
-                <option value="{{ news._id }}">{{ news.reparation |json}}</option>
+                <option value="{{ news._id }}" > <p *ngFor='let key of objectKeys(news.reparation)'>{{key}} : {{ news.reparation[key]}} </p></option>
               </ng-container>
             </select>
           </div>

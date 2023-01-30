@@ -25,8 +25,8 @@
               <td>{{ news.voiture.numero }}</td>
               <td>{{ news.voiture.marque }}</td>
               <td>{{ news.voiture.modele }}</td>
-              <td>
-                {{ news.reparation | json }}
+              <td *ngFor='let key of objectKeys(news.reparation)'>
+                {{key}} : {{ news.reparation[key]}} 
               </td>
               <th>
                 <a
